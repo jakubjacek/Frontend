@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+<!-- Dodanie Karuzeli -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<!-- Dodanie CSS -->
+    <link rel="stylesheet" href="style.css">
+<!-- Dodawanie icony w przegladarce -->    
+    <link rel="icon" href="img/sun-icon.png">
+<!-- Dodanie icon-->
+    <link rel="stylesheet" 
+     href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<!--_____________________________________________________________________________-->
+
+
+<body>
+<!-- HEADER -->
+    <header>
+<!-- Dodawanie ikony -->     
+    
+        <div class="icon">
+            <a href="#home"><img src="img/sun-icon.png" alt=""></a>
+        </div>
+        <div class="header-solar">
+            <a href="#home">UKŁAD SŁONECZNY</a>
+        </div>
+    </div>
+    <div class="planet-btn">
+        <a href="#milkyway">PLANETY</a>
+    </div> 
+        <div class="header-social">
+            <a href="https://science.nasa.gov/solar-system/"><i class='bx bx-info-circle'></i></a>
+            <a href="https://theskylive.com/"><i class='bx bx-info-square' ></i></a>
+            <a href="https://pl.wikipedia.org/wiki/Droga_Mleczna"><i class='bx bxl-wikipedia'></i></a>
+    </header>
+
+<!--_____________________________________________________________________________-->
+<!-- Strona główna -->
+
+<section class="home" id="home">
+    <!-- DODAWANIE FILMU W TLE -->
+    <div class="split-title">
+        <h1 class="left-text">ZERO</h1>
+        <h1 class="right-text">GRAVITY</h1>
+    </div>  
+    <div class="solar-txt">
+        <p> "Istnieją tylko dwie możliwości: albo jesteśmy sami we Wszechświecie, albo nie. Obie są równie przerażające." ~Arthur C. Clarke
+            </p>
+    </div>
+    <video autoplay loop muted playsinline class="back-video">
+        <source src="img/walking.mp4" type="video/mp4">
+    </video> 
+ 
+</section>
+<section class="between"></section>
+<section class="milkyway" id="milkyway">
+<!-- DODAWANIE Karuzeli z planetami do wyboru -->    
+    <div class="gallery">
+        <div class="carousel">
+            <a class="carousel-item" href="#milkyway" onclick="changeVideo('def');">
+                <img src="img/planets-img/solar.jpg">
+                <h4>Układ Słoneczny</h4>
+            </a>
+            <a class="carousel-item" href="#milkyway" onclick="changeVideo('sun');">
+                <img src="img/planets-img/sun.jpg">
+                <h4>Słońce</h4>
+            </a>
+            <a class="carousel-item" href="#milkyway" onclick="changeVideo('mercury');" >
+                <img src="img/planets-img/mercury.jpg">
+                <h4>Merkury</h4>
+            </a>
+            <a class="carousel-item" href="#milkyway" onclick="changeVideo('venus');">
+                <img src="img/planets-img/venus.jpg">
+                <h4>Wenus</h4>
+            </a>
+            <a class="carousel-item" href="#milkyway" onclick="changeVideo('earth');">
+                <img src="img/planets-img/earth.jpg">
+                <h4>Ziemia</h4>
+            </a>
+            <a class="carousel-item" href="#milkyway" onclick="changeVideo('mars');">
+                <img src="img/planets-img/mars.jpg">
+                <h4>Mars</h4>
+            </a>
+            <a class="carousel-item" href="#milkyway" onclick="changeVideo('jupiter');">
+                <img src="img/planets-img/jupiter.png">
+                <h4>Jowisz</h4>
+            </a>
+            <a class="carousel-item" href="#milkyway" onclick="changeVideo('saturn');">
+                <img src="img/planets-img/saturn.png">
+                <h4>Saturn</h4>
+            </a>
+            <a class="carousel-item" href="#milkyway" onclick="changeVideo('uranus');">
+                <img src="img/planets-img/uranus.jpg">
+                <h4>Uran</h4>
+            </a>
+            <a class="carousel-item" href="#milkyway" onclick="changeVideo('neptune');">
+                <img src="img/planets-img/neptune.jpg">
+                <h4>Neptun</h4>
+            </a>
+            <a class="carousel-item" href="#milkyway" onclick="changeVideo('pluto');">
+                <img src="img/planets-img/pluto.jpg">
+                <h4>Pluton</h4>
+            </a>
+          </div>
+    </div>
+ <!--__________________________________________________________-->  
+ <!-- Dodanie domyślnego video z ukladem słonecznym aby mogło się zmieniać na inne --> 
+    <div class="container-planets">
+        <div class="small-video">
+        <video 
+            class="bg-video def active"
+            src="img/planets-video/deafult-planets.mp4"
+            autoplay
+            loop
+            muted
+        ></video>
+        <video 
+            class="bg-video sun"
+            src="img/planets-video/sun.mp4"
+            autoplay
+            loop
+            muted
+        ></video>
+        <video 
+            class="bg-video mercury"
+            src="img/planets-video/mercury.mp4"
+            autoplay
+            loop
+            muted
+        ></video>
+        <video 
+            class="bg-video venus"
+            src="img/planets-video/venus.mp4"
+            autoplay
+            loop
+            muted
+        ></video>
+        <video 
+            class="bg-video earth"
+            src="img/planets-video/earth.mp4"
+            autoplay
+            loop
+            muted
+        ></video>
+        <video 
+            class="bg-video mars"
+            src="img/planets-video/mars.mp4"
+            autoplay
+            loop
+            muted
+        ></video>
+        <video 
+            class="bg-video jupiter"
+            src="img/planets-video/jupiter.mp4"
+            autoplay
+            loop
+            muted
+        ></video>
+        <video 
+            class="bg-video saturn"
+            src="img/planets-video/saturn.mp4"
+            autoplay
+            loop
+            muted
+        ></video>
+        <video 
+            class="bg-video uranus"
+            src="img/planets-video/uranus.mp4"
+            autoplay
+            loop
+            muted
+        ></video>
+        <video 
+            class="bg-video neptune"
+            src="img/planets-video/neptune.mp4"
+            autoplay
+            loop
+            muted
+        ></video>
+        <video 
+            class="bg-video pluto"
+            src="img/planets-video/pluto.mp4"
+            autoplay
+            loop
+            muted
+        ></video>
+    </div> 
+    
+    <div class="content">
+<!-- Dodawanie domyślnego napisu aby mogło się zmieniac na inne -->
+        <p class="model def active">
+            Układ Słoneczny to system planetarny, w którym Słońce jest centralną gwiazdą, 
+            a planety, księżyce, asteroidy, komety i inne ciała niebieskie krążą wokół niego. 
+            Składa się z ośmiu planet, z których każda ma swoje unikalne cechy, oraz innych obiektów, 
+            takich jak planetoidy czy pasy asteroid. Słońce jest głównym źródłem energii, a układ słoneczny 
+            stanowi naszą kosmiczną okolicę, pełną różnorodności i tajemnic.
+            <a href="https://pl.wikipedia.org/wiki/Uk%C5%82ad_S%C5%82oneczny">Dowiedz się więcej...</a>
+        </p>
+        <p class="model sun">
+            Słońce to gwiazda znajdująca się w centrum naszego Układu Słonecznego. Jest jedną z miliardów
+            gwiazd we wszechświecie, ale dla nas jest najważniejsza, ponieważ dostarcza nam światła i ciepła 
+            niezbędnego do życia. Słońce jest tak olbrzymie, że wewnątrz niego zmieściłoby się ponad milion Ziemi!
+            To prawdziwie potężna kula ognia i światła. Słońce ma cykl aktywności, zwany cyklem słonecznym, 
+            który trwa około 11 lat. W tym czasie zachodzą zmiany w ilości plam słonecznych i aktywności słonecznej,
+             wpływając na warunki pogodowe w przestrzeni kosmicznej i na Ziemi.
+            <a href="https://pl.wikipedia.org/wiki/S%C5%82o%C5%84ce">Dowiedz się więcej...</a>
+        <p class="model mercury">
+            Merkury to najbliższa Słońcu planeta w Układzie Słonecznym i jednocześnie najmniejsza. Jest to skalista planeta podobna do Księżyca,
+            pokryta licznymi kraterami po uderzeniach meteoroidów. Temperatury na Merkurym są skrajne - w ciągu dnia może być bardzo gorąco, a nocą bardzo
+            zimno ze względu na brak atmosfery. Merkury nie ma ochrony przed promieniowaniem słonecznym ani kosmicznym.
+            W wyniku tego, jego powierzchnia jest silnie napromieniowana, co sprawia, że jest to jedna z najbardziej ekstremalnych i trudnych 
+            do zamieszkania planet w Układzie Słonecznym.   
+            <a href="https://pl.wikipedia.org/wiki/Merkury">Dowiedz się więcej...</a>
+        <p class="model venus">
+            Venus, nazywana często "siostrą Ziemi", jest drugą planetą od Słońca. To gorąca, skalista planeta podobna do Ziemi pod wieloma względami. 
+            Jej gęsta atmosfera jest zdominowana przez dwutlenek węgla i chmury kwasu siarkowego, co powoduje bardzo wysokie temperatury na jej powierzchni, 
+            sprawiając, że jest najgorętszą planetą w Układzie Słonecznym. Venus to również jedyna planeta w Układzie Słonecznym, która obraca się w kierunku 
+            przeciwnym do większości planet, czyli zgodnie z ruchem wskazówek zegara. Jej powierzchnia jest pokryta licznymi wulkanami i uskokami, co sugeruje,
+             że była aktywna geologicznie w przeszłości.
+            <a href="https://pl.wikipedia.org/wiki/Wenus">Dowiedz się więcej...</a>
+        <p class="model earth">
+            Ziemia to nasz dom, trzecia planeta od Słońca i jedyna znana planeta, na której istnieje życie. Jest unikalna ze względu na obfitość wody w stanie 
+            ciekłym, gazy atmosferyczne, które tworzą warunki umożliwiające życie, oraz różnorodność ekosystemów. Posiada skomplikowaną biosferę, w której 
+            miliony gatunków roślin, zwierząt i mikroorganizmów współistnieją. Planeta Ziemia jest również dynamiczna geologicznie, z płytami tektonicznymi,
+             wulkanami i różnorodnymi formami terenu, od gór po głębokie oceany. Ludzkość zrewolucjonizowała Ziemię swoim wpływem, kształtując krajobrazy,
+              wprowadzając technologie i zmieniając środowisko naturalne w procesie cywilizacyjnym.
+            <a href="https://pl.wikipedia.org/wiki/Ziemia">Dowiedz się więcej...</a>
+        <p class="model mars">
+            Mars, nazywany "Czerwoną Planetą", to czwarta planeta od Słońca, charakteryzująca się czerwonawym wyglądem powierzchni. Jest to planeta skalista,
+             która przyciąga uwagę ze względu na podobieństwo do Ziemi i możliwość bycia kiedyś miejscem dla życia. Mars ma największy wulkan w Układzie Słonecznym,
+              Olympus Mons, oraz najdłuższą dolinę, Valles Marineris. Jego powierzchnia jest pełna znaków erozji wskazujących na obecność wody w przeszłości, 
+              co sugeruje, że kiedyś mogły istnieć warunki umożliwiające życie. Ludzkość intensywnie bada tę planetę, wysyłając sondy kosmiczne i planując przyszłe
+              misje załogowe w nadziei na zgłębienie tajemnic historii i ewentualnych form życia na Marsie.
+            <a href="https://pl.wikipedia.org/wiki/Mars">Dowiedz się więcej...</a>
+        <p class="model jupiter">
+            Jowisz, największa planeta w Układzie Słonecznym, jest gazowym olbrzymem o imponującej masie i potężnym polu grawitacyjnym. Jest to piąta planeta od 
+            Słońca, a jego charakterystyczne prążkowanie to efekt rozległego systemu atmosferycznego. Jowisz ma również największą znaną nam burzę, Wielką Czerwoną 
+            Plamę, która trwa od setek lat. Planeta posiada wiele księżyców, z czego cztery największe to Galileuszowe księżyce: Io, Europa, Ganimedes i Kallisto.
+            Jowisz jest badany przez sondy kosmiczne, takie jak Juno, dostarczając niezwykłych danych naukowych na temat tego olbrzyma gazowego i jego układu 
+            księżyców.
+            <a href="https://pl.wikipedia.org/wiki/Jowisz">Dowiedz się więcej...</a>
+        <p class="model saturn">
+            Saturn to jedna z najbardziej rozpoznawalnych planet dzięki swoim pierścieniom, które są złożone głównie z lodu, skał i pyłu. Jest to gazowy olbrzym,
+             druga co do wielkości planeta w Układzie Słonecznym. Jego charakterystyczny wygląd sprawia, że jest fascynującym obiektem astronomicznym. Saturn 
+             posiada ponad 80 znanych księżyców, z których Tytan, z grubą atmosferą i jeziorami z metanu, jest jednym z najbardziej interesujących. Badania sondy
+              Cassini dostarczyły niesamowitych informacji na temat Saturna, jego pierścieni i księżyców, rzucając światło na tajemnice tego pięknego olbrzyma 
+              gazowego.
+            <a href="https://pl.wikipedia.org/wiki/Saturn">Dowiedz się więcej...</a>
+        <p class="model uranus">
+            Uran to gazowy olbrzym, siódma planeta od Słońca, znana z nietypowego nachylenia osi obrotu,
+             co powoduje, że obraca się prawie na boku w stosunku do płaszczyzny orbity. Ta nietypowa rotacja oznacza, 
+             że na Uranie występują ekstremalne zmiany sezonowe, gdzie jedna półkula może być oświetlona przez Słońce przez wiele lat,
+              podczas gdy druga jest w ciemności. Uran posiada pierścienie, ale są one znacznie mniej widoczne niż te Saturna. Planeta ta ma również 
+              wiele księżyców, z których największy, Miranda, posiada krajobrazy geologiczne sugerujące skomplikowaną historię geologiczną. Badania 
+              teleskopowe i misje kosmiczne dostarczyły nam ograniczonych informacji o Uranie, ale wciąż pozostaje to fascynująca i tajemnicza planeta
+               w naszym Układzie Słonecznym.
+        <a href="https://pl.wikipedia.org/wiki/Uran">Dowiedz się więcej...</a>
+        <p class="model neptune">
+            Neptun to gazowy olbrzym, ósma i ostatnia planeta w naszym Układzie Słonecznym. Jego charakterystyczny niebieski kolor zawdzięcza atmosferze zdominowanej przez metan,
+             co sprawia, że Neptun jest jedną z najzimniejszych planet. Ten olbrzymowy gazowy świat posiada dynamiczną atmosferę, gdzie obserwuje się wiatry osiągające ogromne 
+             prędkości oraz ciemne plamy, podobne do Wielkiej Czerwonej Plamy na Jowiszu. Neptun ma kilka księżyców, a najbardziej znany z nich to Tryton, który ma 
+             unikalne cechy, w tym wulkaniczne aktywności na swojej powierzchni. Badania sondy Voyager 2 dostarczyły niesamowitej wiedzy na temat tej tajemniczej 
+             planety, ale wciąż pozostaje wiele do odkrycia o Neptunie i jego systemie.
+            <a href="https://pl.wikipedia.org/wiki/Neptun">Dowiedz się więcej...</a>
+        <p class="model pluto">
+            Pluton był przez długi czas uważany za dziewiątą planetę Układu Słonecznego, ale w 2006 roku został zdegradowany do statusu karła planety. 
+            To mała, skalista planeta karłowata, która jest jedną z wielu podobnych obiektów w obszarze zwrotnikowym Układu Słonecznego. Pluton 
+            ma charakterystyczny, mroźny krajobraz, z pokrytymi lodem równinami i obszarami górskimi. Jego orbita jest bardzo ekscentryczna, czasem 
+            znajdując się bliżej Słońca niż Neptun. Pluton jest częścią pasa obiektów transneptunowych, gdzie znajdują się tysiące innych małych ciał
+             niebieskich. Poza swoimi pięcioma znanymi księżycami, Pluton wciąż jest badany i poznawany dzięki misjom kosmicznym, takim jak New Horizons,
+              która dostarczyła niezwykłych obrazów i informacji o tej fascynującej i odległej części Układu Słonecznego.
+            <a href="https://pl.wikipedia.org/wiki/(134340)_Pluton">Dowiedz się więcej...</a>
+    </div>
+</div>
+</section>
+
+<!-- copyrights -->
+<section>  
+    <audio src="" id="audio"></audio>
+    <div class="lastone">
+        <div class="copyright"> 
+            <p><span>&#169;</span> Zero Gravity </p>
+        </div>
+        <div class="music-player">
+            <h1 class="music-name">song one</h1>
+             <div class="song-slider">
+                <input type="range" value="0" class="seek-bar">
+                <span class="current-time"> 00:00 </span>
+                <span class="song-duration">00:00</span>
+             </div>
+             <div class="controls">
+                <button class="btn backward-btn"><i class='bx bx-rewind'></i></button>
+                <button class="play-btn pause">
+                    <span></span>
+                    <span></span>
+                </button>
+                <button class="btn forward-btn"><i class='bx bx-fast-forward' ></i></button>
+             </div>     
+        </div>
+        <div class="disk"></div>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.carousel').carousel();
+    });
+</script>
+<script src="data.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Space Mono", sans-serif;
+}
+header {
+/* Pozycja elementu stała: nagłówek pozostaje na ekranie nawet gdy się przewija stronę: position: fixed; */
+    width: 100%;            /* zajmuje całą dostępną szerokość */
+    top: 0; 
+    right: 0;               /* Nagłówek będzie przyklejony do gornej i prawej karwedzi ekranu */
+    z-index: 1000;          /* Warstwa na której nagłówek znajduje się w stosunku do innych elementów */
+    display:flex;           /* Łatwe rozmieszczenie el wewnątrz nagłówka */
+    align-items: center;    /* Wyśrodkowuje zawartość w pione względem nagłówka*/
+    justify-content:space-between; /* Rozmieszcza el. wewnątrz nagłówka w sposób równomierny */
+    background: linear-gradient(to top left,#2a2b30, #000);
+    padding: 1px 150px;      /* 1px na górze i dole 80px od lewej i prawej */
+    color: #fff;
+}
+::-webkit-scrollbar {
+    width: 0; /* Szerokość paska przewijania w poziomie */
+    height: 0; /* Wysokość paska przewijania w pionie */
+  }
+.icon img {
+    width: 5rem;
+}
+.header-solar a,
+.planet-btn a,
+.header-social a {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0px 0px 4px #fff;
+
+} 
+.header-social a {
+    padding: 15px;
+}
+
+
+/* ______________________________________________________________________________ */
+/* sekcja HOME */
+
+.home {
+    position: relative; /* Określa, że elementy potomne będą pozycjonowane względem tego kontenera. */
+    width: 100%;
+    height: 100vh;      /* Wysokość równa wysokości okna przeglądarki */
+    overflow: hidden;   /* Ukrywa ewentualne elementy, które wykraczają poza granice kontenera*/
+}
+.home video.back-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Zachowanie proporcji obrazu wideo */
+}
+
+
+.split-title {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    text-shadow: 0px 0px 50px #3283d5;
+}
+.split-title h1 {
+    font-size: 6em;
+}
+.left-text, 
+.right-text {
+    position: absolute;
+    top: 8rem;
+    color: white;  
+}
+.left-text {
+   
+    left: 15%;
+}
+
+.right-text {
+    right: 15%;
+}
+
+.solar-txt {
+    display: grid;
+    grid-template-columns: repeat(2, 0.44fr);
+    position: absolute;
+    bottom: 40%;
+    left: 3%;
+    z-index: 1;
+    align-items: center;
+    text-align: left;
+    
+}
+.solar-txt p {
+    
+    color: #fff;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+    text-shadow: 0px 2px 10px #000;   
+}
+.back-video {
+    position: relative;
+    z-index: 0;
+}
+/* Sekcja between która ma za zadanie tylko dodanie ładnego ( w miarę) przejscia */
+.between
+{
+    background: rgb(0, 0, 0);
+      background: linear-gradient(0deg, rgba(0, 0, 0, 1) 36%, rgba(171, 159, 146, 1) 100%);
+      /* Dodatkowe style dla przykładu */
+      width: 100%;
+      height: 30px;
+      display: flex;
+}
+/*__________________________________________________________________________*/
+/* SEKCJA MILKYWAY */
+.milkyway {
+    width:100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: url(img/wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+}
+.gallery {
+    position: absolute;
+    content: '';
+    top: 2.5rem;
+    left: 50%;
+    width: 55%;
+    height: 30%;
+    z-index: 100;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    transform: translate(-50%, 0);
+}
+.gallery .carousel {
+    width: 100%;
+    height: 100%;
+}
+.carousel .carousel-item {
+    width: 18em;
+    cursor: pointer;
+}
+.carousel .carousel-item img {
+    border-radius: 20px;
+}
+.carousel .carousel-item h4 {
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 9px #fff;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.container-planets {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position:static;
+}
+.small-video .bg-video,
+.content .model {
+    width: 50rem; /* szerokość każdego kontenera */
+    height: 30rem; /* wysokość kontenera */
+    border: 2px solid #ccc; /* obramowanie dla kontenerów */
+    border-radius: 80px; /* zaokrąglenie rogów kontenerów */
+    box-shadow: 0px 1px 10px #fff;
+    border: 3px solid;
+}
+.small-video .bg-video {
+  
+    margin-right: 5%; /* odstęp między kontenerami */
+    position: absolute; /* Pozycja absolutna */
+    top: 40%; /* Odległość od góry */
+    left: 5%; /* Odległość od lewej krawędzi */
+    display: none;
+    object-fit: cover;
+}
+.bg-video.active {
+    display: block;
+}
+.content .model {
+    margin-left: 5%; /* odstęp między kontenerami */
+    position: absolute;
+    top: 31%;
+    right: 2%;
+    background: url(img/planets-img/text-bg-milk.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: none;
+    padding: 30px;
+}
+.model.active {
+    display: block;
+}
+.model.active a {
+    display: block; /* Zamienia link na blokowy, aby móc go wyśrodkować */
+    text-align: center; /* Centrowanie tekstu */
+    width: 20rem; /* Długość przycisku */
+    padding: 5px; /* Wewnętrzny margines dla przycisku */
+    margin: 20px auto 0; /* Ustawia przycisk na dole i wyśrodkowany w poziomie */
+    cursor: pointer;
+    color: #1d94e3;
+    font-size: 15px;
+    border: 1px solid #1d94e3;
+    border-radius: 10px; /* Zaokrąglenie krawędzi przycisku */
+    background: #000;
+    text-shadow: none;
+}
+
+.content p {
+    margin: 4.5%;
+    color: #fff;
+    font-size: clamp(1vw, 2vw, 1vw); /* Rozmiar czcionki zależny od szerokości widoku */
+    text-align:center;
+    text-shadow: 2px 2px 10px #fff;
+    display: none;
+    overflow: auto;
+    padding: 10px;
+}
+.model.active p {
+    display: block;
+}
+
+
+/*________________COPYRIGHTS________________________*/
+
+.lastone {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #fff;
+    background: linear-gradient(to top left,#2a2b30, #000);
+    padding: 5px;
+    justify-content: space-between;
+    
+}
+.copyright {
+    width: 13vw;
+    height: 10vw;
+    border: 5px solid #292a30;
+    border-radius: 50%;
+    padding: 5px 5px;
+    display: block;
+    text-align: center;
+    box-shadow: 2px 2px 2px #fff;
+    margin-left: 5%;
+}
+.copyright p,
+.copyright p span {
+    margin-top: 40%;
+    font-size: 1vw;
+    
+}
+
+
+/* Część odpowiadająca za odtwarzacz muzyki*/
+.music-player {
+    width: 45rem;
+    height: 18rem;
+    border-radius: 10px;
+    background: linear-gradient(top right,#000, #fff);
+    box-shadow: 0px 0px 20px #fff;
+    padding: 20px;
+    overflow: hidden;
+    color: #fff;
+    margin: 20px 20%;
+
+}
+.music-name {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 19px;
+    font-weight: 600;
+    text-shadow: 0px 0px 15px #fff;
+    margin-bottom: 5px;
+}
+.disk {
+    position: relative;
+    display: block;
+    margin-right: 5%;
+    width: 13vw;
+    height: 10vw;
+    border-radius: 50%;
+    background-image: url(img/planets-img/solar-system-music.png);
+    background-size: cover;
+    box-shadow: 2px 2px 2px #fff;
+    animation: rotate 20s linear infinite;
+    animation-play-state: paused;
+}
+.disk.play {
+    animation-play-state: running;
+}
+.disk::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #000;
+}
+.song-slider {
+    width: 100%;
+    position: relative;
+}
+.seek-bar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 12px;
+    border-radius: 15px;
+    background: #000;
+    overflow: hidden;
+    cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 20px;
+    background: #fff;
+    box-shadow: -500px 0 0 500px #000;
+}
+
+.current-time,
+.song-duration {
+    font-size: 15px;
+}
+.song-duration {
+    position: absolute;
+    right: 0;
+}
+.controls {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 5px;
+}
+.play-btn {
+    position: relative;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #000;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 0px 15px #fff;
+}
+.play-btn:active{
+    color: #fff;
+    background-color: #000;
+}
+.pause-btn:active {
+    color: #fff;
+    background-color: #000;
+}
+.play-btn span {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 33px;
+    border-radius: 3px;
+    background: #fff;
+    transition: .5s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.play-btn span:nth-child(2) {
+    left: 55%;
+    transform-origin: center;
+}
+.play-btn.pause span:nth-child(2) {
+    transform: translateY(-50%) scaleY(0);
+}
+.play-btn.pause span:nth-child(1) {
+    width: 35%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+    clip-path: polygon(0 0, 100% 50%, 100% 50%, 0% 100%);
+}
+.play-btn-pause {
+    animation: pulse 2s linear infinite;
+
+}
+@keyframes pulse {
+    0% {
+        box-shadow: 0;
+    }
+    50% {
+        box-shadow: 0 0 0 5px rgba(255, 255, 255 0.1);
+    }
+    100% {
+        box-shadow: 0 0 0 5px rgba(255, 255, 255 0.1);
+    }
+}
+.btn {
+    width: 40px;
+    height: 40px;
+    background: #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #fff;
+}
+.btn:hover {
+    background: #000; /* Domyślny kolor tła */
+    /* Pozostałe style */
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* RESPONSYWNOŚĆ STRONY */
+
+@media only screen and (max-width: 1750px) {
+    .small-video .bg-video,
+    .content .model {
+        width: 45rem; /* szerokość każdego kontenera */
+        height: 30rem; /* wysokość kontenera */ 
+        font-size: 1.5em;
+    }
+}
+@media only screen and (max-width: 1550px) {
+    .small-video .bg-video,
+    .content .model {
+        width: 40rem; /* szerokość każdego kontenera */
+    }
+}
+@media only screen and (max-width: 1400px) {
+    .small-video .bg-video,
+    .content .model {
+        width: 35rem; /* szerokość każdego kontenera */
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .small-video .bg-video,
+    .content .model {
+        width: 30rem; /* szerokość każdego kontenera */
+    }
+    
+}
+
+@media only screen and (max-width: 1030px) {
+    header {
+        padding: 1px 20px; /* Dostosowanie paddingu dla mniejszych ekranów */
+    }
+
+    .icon img {
+        width: 3rem; /* Skalowanie obrazka ikony */
+    }
+
+    .header-solar a,
+    .planet-btn a,
+    .header-social a {
+        font-size: 1.5rem;
+    }
+    .split-title h1 {
+        font-size: 5rem;
+    }
+    .solar-txt p {
+        font-size: 1.5rem;
+    }
+
+    .container-planets {
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
+        position:static;
+    }
+    .small-video .bg-video{
+        display: none;
+    }
+    .content .model {
+        width: 80%; /* zmniejszamy szerokość na ekrany o mniejszej szerokości */
+        height: 30rem; /* zmniejszamy wysokość dla lepszego dopasowania */
+        margin: 10%; /* dodajemy margines między kafelkami */
+        position: relative; /* zmieniamy na relatywną dla odpowiedniego ułożenia */
+        float: left; /* wyrównujemy kafelki obok siebie */
+    }
+    .copyright {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header-social {
+        display: none; /* Ukrycie sekcji na mniejszych ekranach */
+    }
+    .split-title h1 {
+        display: none;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .carousel .carousel-item {
+        width: 15em;
+    }
+    .gallery {
+        top: 5rem;
+        width: 80%;
+        height: 50%;
+    }
+}
+@media only screen and (max-width: 476px) {
+    .header-solar a{
+        display: none;
+    }
+    header {
+        display: flex;
+        justify-content: center; /* Wyśrodkowanie zawartości w nagłówku */
+    }
+
+    .icon,
+    .planet-btn {
+        display: block; /* Wyświetlenie tylko ikony i planet-btn */
+    }
+
+    .icon {
+        text-align: center; /* Wyśrodkowanie ikony */
+    }
+    .model.active a {
+        width: auto; 
+        padding: auto; /* Wewnętrzny margines dla przycisku */
+        margin: auto; /* Ustawia przycisk na dole i wyśrodkowany w poziomie */
+        cursor: pointer;
+        color: #1d94e3;
+        font-size: 1rem;
+    
+    }
+}
